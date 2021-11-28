@@ -17,6 +17,8 @@ public class CadastrarCliente {
 				.orElseThrow(() -> new BadRequestException("Campo: cadastroData não pode ser nulo"));
 		Optional.ofNullable(cliente.getDataAlteracao())
 				.orElseThrow(() -> new BadRequestException("Campo: DataAlteracao não pode ser nulo"));
+		Optional.ofNullable(cliente.getStatus())
+				.orElseThrow(() -> new BadRequestException("status do cliente não pode ser nulo"));
 
 	}
 	
